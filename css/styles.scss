@@ -1,0 +1,38 @@
+
+@import 'variables.scss';
+@import 'top-bar.scss';
+@import 'nav-bar.scss';
+@import 'section-search.scss';
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $font-family-principal;
+    
+  
+    .contenedor{
+        width: 100%;
+        min-width: 320px;
+        display: flex;
+        justify-content: center;   
+       
+        
+        
+        .contenedor_center{
+            width: 85%;
+    
+
+
+           
+
+        }   
+
+        
+    }     
+}

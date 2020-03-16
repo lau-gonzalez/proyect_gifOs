@@ -1,0 +1,42 @@
+
+
+body{  
+    
+  
+    .contenedor{      
+        
+        .contenedor_center{  
+
+
+            .search_input{
+                background-color: $color-background-search-div;
+                box-shadow: $box-shadow-search-div;
+
+                .top_bar{
+                    box-shadow: 0 0 0 0 #110038;
+                    h2{
+                        font-weight: 700;
+                    }
+                    
+                }
+                div{
+
+                    input{
+                        height: 48px;
+                        width: 90%;
+                        max-width: 1200px;
+                        margin: 12px 2px 12px 15px;
+
+                    }
+                    button{
+                        padding: 6px 14px 6px 8px;                        
+                    }
+                }
+            
+            }
+
+        }   
+
+        
+    }     
+}

@@ -1,0 +1,159 @@
+body{
+  
+    .contenedor{
+
+        .contenedor_center{
+
+    
+            header{
+                margin-top: 39px;
+                margin-bottom: 19px;             
+                
+
+                nav{
+                    width: 100%;
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    img{
+                        width: 102.6px;
+                    }
+                    ul{
+                        list-style: none;
+                        display: inline-flex;
+
+                        
+                        
+                                             
+                        .list_theme{
+                            display: inline-flex;
+                            
+                            
+
+                            &:hover > li .submenu{
+                                visibility: visible;
+                            }
+                            
+
+                            li{
+                                margin: 0;                                
+                                padding: 1px;
+
+                                .link_theme{
+                                    padding: 7px 26px;                                    
+                                }                                                         
+                                
+                                
+                                .submenu{
+                                
+                                    width: 100%;
+                                    max-width: 176.469px;
+                                    margin-top: 2px;
+                                    position: absolute;                                    
+                                    display: block;
+                                    visibility: hidden;
+                                    background-color: $color-background-boxmenu-day;
+                                    box-shadow: $box-shadow-boxmenu-day;
+                                    
+                                    
+                                    li{ 
+                                        margin: 13px 10px;                                                                         
+                                        padding: 0;
+                                        border: none;
+                                        box-shadow: none;
+                                        background-color: transparent; 
+                                                                          
+                                        
+                                        a{
+                                            text-align: left;                                            
+                                            display: block; 
+                                            
+                                                                                
+                                        }
+                                        .button1{  
+                                            padding: 7px 60px 7px 16px;                                      
+                                            background-color: $color-background-button1-menu-day;
+                                            box-shadow: $box-shadow-button1-menu-day;
+                                            border: $color-border-button1-menu-day;
+                                        }
+                                        .button2{
+                                            padding: 7px 49px 7px 16px;
+                                            background-color: $color-background-button2-menu-day;
+                                            box-shadow: $box-shadow-button2-menu-day;
+                                            border: $color-border-button2-menu-day;
+                                        }
+                                    }
+                                }
+                            }
+    
+                            .button_arrow a{
+                                padding: 6px 12px;
+                                
+                            }
+                              
+                            
+                        }
+                                                
+                        
+                        li{
+                            
+                            margin: 0 10px;
+                            padding: 1px;                           
+                            border: 1px solid #110038;
+                            box-shadow: $box-shadow-button-day;
+                            background-color: $color-background-button-day;
+
+                            &:hover > a{
+                                border: 1px dashed #110038;
+                            }
+
+                            &:hover{
+                                background-color: $color-background-button-hover-day;
+                                box-shadow: $box-shadow-button-hover-day;
+                            }
+                            
+                                                  
+                            
+                            
+                            a{  
+                                text-decoration: none;
+                                color: $color-font-button;                                
+                                font-size: 16px;
+                                display: block;
+                                padding: 7px 26px;
+                                img{
+                                    width: 10px;
+                                   
+                                }
+                            }
+                                                                                             
+                                
+                        }
+
+                        .without_border{
+                            border: none;
+                            margin: 0;
+                            margin-left: 10px;                                                       
+                            box-shadow: none;
+                            background-color: transparent;
+                            a{
+                                padding: 7px 0px;
+                            }
+
+                            &:hover{
+                                background-color: transparent;
+                                box-shadow: none;
+                            }
+                        }                                                        
+
+
+                        
+                    }
+                }
+            }
+
+        }
+    }
+}
