@@ -12,7 +12,7 @@ body .contenedor .contenedor_center header {
   margin-bottom: 19px; }
   body .contenedor .contenedor_center header nav {
     width: 100%;
-    display: inline-flex;
+    display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between; }
@@ -20,9 +20,10 @@ body .contenedor .contenedor_center header {
       width: 102.6px; }
     body .contenedor .contenedor_center header nav ul {
       list-style: none;
-      display: inline-flex; }
+      display: flex;
+      justify-content: flex-end; }
       body .contenedor .contenedor_center header nav ul .list_theme {
-        display: inline-flex; }
+        display: flex; }
         body .contenedor .contenedor_center header nav ul .list_theme:hover > li .submenu {
           visibility: visible; }
         body .contenedor .contenedor_center header nav ul .list_theme li {
@@ -92,19 +93,26 @@ body .contenedor .contenedor_center header {
           box-shadow: none; }
 
 body .contenedor .contenedor_center .search_input {
+  display: flex;
+  flex-flow: column nowrap;
   background-color: #E6E6E6;
   box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; }
   body .contenedor .contenedor_center .search_input .top_bar {
     box-shadow: 0 0 0 0 #110038; }
     body .contenedor .contenedor_center .search_input .top_bar h2 {
       font-weight: 700; }
-  body .contenedor .contenedor_center .search_input div input {
-    height: 48px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 12px 2px 12px 15px; }
-  body .contenedor .contenedor_center .search_input div button {
-    padding: 6px 14px 6px 8px; }
+  body .contenedor .contenedor_center .search_input .input_button_search {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center; }
+    body .contenedor .contenedor_center .search_input .input_button_search input {
+      height: 48px;
+      width: 82%;
+      margin: 12px 0; }
+    body .contenedor .contenedor_center .search_input .input_button_search button {
+      width: 12%;
+      padding: 9px 0; }
 
 * {
   box-sizing: border-box;

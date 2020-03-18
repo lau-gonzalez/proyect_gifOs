@@ -9,6 +9,8 @@ body{
 
 
             .search_input{
+                display: flex;
+                flex-flow: column nowrap;
                 background-color: $color-background-search-div;
                 box-shadow: $box-shadow-search-div;
 
@@ -19,17 +21,25 @@ body{
                     }
                     
                 }
-                div{
+
+                .input_button_search{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-evenly;
+                    align-items: center;
 
                     input{
                         height: 48px;
-                        width: 90%;
-                        max-width: 1200px;
-                        margin: 12px 2px 12px 15px;
+                        width: 82%;
+                        margin: 12px 0;
+                        
+                        
 
                     }
                     button{
-                        padding: 6px 14px 6px 8px;                        
+                        width: 12%;
+                        padding: 9px 0;
+                                               
                     }
                 }
             
