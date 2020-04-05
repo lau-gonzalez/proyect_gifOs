@@ -101,16 +101,16 @@ body .contenedor .contenedor_center .search_input {
     box-shadow: 0 0 0 0 #110038; }
     body .contenedor .contenedor_center .search_input .top_bar h2 {
       font-weight: 700; }
-  body .contenedor .contenedor_center .search_input .input_button_search {
+  body .contenedor .contenedor_center .search_input #input_button_search {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center; }
-    body .contenedor .contenedor_center .search_input .input_button_search input {
+    body .contenedor .contenedor_center .search_input #input_button_search input {
       height: 48px;
       width: 82%;
       margin: 12px 0; }
-    body .contenedor .contenedor_center .search_input .input_button_search button {
+    body .contenedor .contenedor_center .search_input #input_button_search button {
       width: 12%;
       padding: 9px 0; }
 

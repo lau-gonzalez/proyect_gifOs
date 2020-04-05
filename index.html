@@ -42,15 +42,17 @@
                 <div class="top_bar">
                     <h2>Buscar </h2>
                 </div>
-                <div class="input_button_search">
-                    <input type="text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                    <button disabled>&#128269 Buscar</button>
-                </div>
+                <form id="input_button_search">
+                    <input type="text" id='search-input' class="search-input" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                    <button id="btn" class="btn" type="submit">&#128269 Buscar</button>                  
+                </form>
             </section>
             <section>
-                <!-- <h4>Grid</h4>
-                <div id="grid"></div> -->
+                <div id="results" class="results">
+                    <!-- gif Images Here -->
+                </div>
             </section>
+            
       </div>
     </div>  
 </body>
