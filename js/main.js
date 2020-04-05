@@ -3,7 +3,6 @@ $(document).ready(function(){
         const searchForm = document.getElementById('input_button_search');
         const searchInput = document.getElementById('search-input');
         const resultsEl = document.getElementById('results');
-        
 
         searchForm.addEventListener('submit',function (e) {
 
@@ -46,13 +45,13 @@ $(document).ready(function(){
         
 
         $('.search-input').keyup(function() {
-            
+            const value = $('.search-input').val();
             const n = value.lenght;
             
-            console.log(value.lenght);
+            console.log(value);
             console.log(n);
 
-            if((value.lenght) > 1) 
+            if((n) > 1) 
                 console.log('entro al if');
                 //$('#btn').attr('disabled',false);
              else 
