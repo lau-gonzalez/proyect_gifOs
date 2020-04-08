@@ -40,24 +40,23 @@ $(document).ready(function(){
 
         };
 
-        $('#btn').attr('disabled',true);
-                
+        $('#btn').attr('disabled',true);                
         
 
         $('.search-input').keyup(function() {
             const value = $('.search-input').val();
-            const n = value.lenght;
+            const n = value.length;
             
             console.log(value);
             console.log(n);
 
-            if((n) > 1) 
+            if((n) > 0) {
                 console.log('entro al if');
-                //$('#btn').attr('disabled',false);
-             else 
-                //$('#btn').attr('disabled',true);
+                $('#btn').attr('disabled',false);
+            }else {
+                $('#btn').attr('disabled',true);
                 console.log('entro al else')
-            
+            }
 
 
         });           
