@@ -1,0 +1,63 @@
+
+body{
+    .contenedor{
+        .contenedor_center{
+            .search_input{
+                #results_suggested{
+
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-evenly;
+                    background-color: $color-background-search-div;
+                    box-shadow: $box-shadow-search-div;
+                    
+
+                    ul{
+                        list-style: none;
+                        width: 82%;
+                        
+                        
+
+                        li{
+                            
+                            border: 1px solid #808080;
+                            margin: 10px 0;
+                            box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+                            
+                            
+                            
+                            a{
+                                display: block;
+                                font-family: $font-family-principal;
+                                font-size: 16px;
+                                color: $color-font-button;
+                                text-decoration: none;
+                                padding: 5px 0;
+                                margin: 1px;
+
+                                &:hover{
+                                    border: 1px dashed #110038;
+                                }
+                                                                
+                            }
+
+                            
+                        }
+                    }
+
+                    .div_empty{
+                        width: 12%;
+                    }
+                        
+                    
+
+                    
+                    
+
+
+
+                }
+            }
+        }
+    }
+}

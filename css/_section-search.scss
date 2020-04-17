@@ -15,7 +15,8 @@ body{
                 box-shadow: $box-shadow-search-div;
 
                 .top_bar{
-                    box-shadow: 0 0 0 0 #110038;
+                    box-shadow: none;
+                    width: 100%;
                     h2{
                         font-weight: 700;
                     }
@@ -27,20 +28,53 @@ body{
                     flex-flow: row nowrap;
                     justify-content: space-evenly;
                     align-items: center;
+                    
 
                     input{
                         height: 48px;
                         width: 82%;
                         margin: 12px 0;
+                        font-family: $font-family-principal;
+                        color: $color-font-button;
                         
                         
 
                     }
                     button{
                         width: 12%;
-                        padding: 9px 0;
+                                            
+                        p{  
+                            vertical-align: center;
+                            padding: 8px 4px;
+                            margin: 1px 1px;
+                            font-size: 16px;
+                            font-family: $font-family-principal;
+                            
+                        }
                                                
                     }
+
+                    .enable{
+                        
+                                                                    
+                        border: 1px solid #110038;
+                        box-shadow: $box-shadow-button-day;
+                        background-color: $color-background-button-day;
+                        color: $color-font-button;
+
+                        &:hover > p{
+                            border: 1px dashed #110038;
+                        }
+
+                        &:hover{
+                            
+                            background-color: $color-background-button-hover-day;
+                            box-shadow: $box-shadow-button-hover-day;
+                        }
+
+                    }
+
+
                 }
             
             }

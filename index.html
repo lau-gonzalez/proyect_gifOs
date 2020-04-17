@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">   
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     
     
@@ -28,13 +28,13 @@
                         <div class="list_theme">
                             <li><a class="link_theme" href="">Elegir tema</a>
                                 <ul class="submenu">
-                                    <li><a class="button1" href="">Sailor Day</a></li>
+                                    <li><a class="button1" href=""><span>S</span>ailor Day</a></li>
                                     <li><a class="button2" href="">Sailor Night</a></li>
                                 </ul>
                             </li>
                             <li class="button_arrow"><a href=""><img src="img/dropdown.svg" alt=""></a></li>
                         </div>
-                        <li class="without_border"><a href="">Mis Guifos</a></li>
+                        <li class="without_border"><a href=""><span>M</span>is Guifos</a></li>
                     </ul>            
                 </nav>
             </header>
@@ -44,11 +44,27 @@
                 </div>
                 <form id="input_button_search">
                     <input type="text" id='search-input' class="search-input" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                    <button id="btn" class="btn" type="submit">&#128269 Buscar</button>                  
+                    <button id="btn" class="btn" type="submit"><p><img src="img/lupa_inactive.svg" alt="lupa"> Buscar</p></button>                  
                 </form>
+                <div id="results_suggested">
+                    <button onclick="tag()" style='display:none;'></button>
+                    
+                    
+                </div>
             </section>
-            <section>
-                <div id="results" class="results">
+            <section id="section-results-suggested">
+                <div>
+                    <input type="text" class="top_input_section" value='Hoy te sugerimos:' disabled>
+                </div>
+                <div id="div-results_suggested" class="div-results_suggested">
+                    <!-- gif Images Here -->
+                </div>
+            </section>
+            <section id="section-results-trends">
+                <div>
+                    <input type="text" class="top_input_section" value='Tendencias' disabled >
+                </div>
+                <div id='div-results_trends' class='div-results_trends'>
                     <!-- gif Images Here -->
                 </div>
             </section>

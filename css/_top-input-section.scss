@@ -1,0 +1,22 @@
+body{
+    .contenedor{
+        .contenedor_center{
+            #section-results-suggested,#section-results-trends{
+                margin-top: 64px;            
+            
+                .top_input_section{
+                    font-family: $font-family-principal;
+                    color: $color-font-button;
+                    font-size: 14px;
+                    display: block;
+                    width: 100%;
+                    background-color: #FFFAFE;
+                    border: $color-border-top-input-section-day;
+                    box-shadow: $box-shadow-top-input-section-day;
+                    padding: 7px 0px 7px 7px;
+                                    
+                }
+            }
+        }
+    }
+}

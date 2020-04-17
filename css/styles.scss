@@ -1,8 +1,12 @@
 
-@import 'variables.scss';
-@import 'top-bar.scss';
-@import 'nav-bar.scss';
-@import 'section-search.scss';
+@import 'variables.';
+@import 'top-bar';
+@import 'nav-bar';
+@import 'section-search';
+@import 'results-suggested';
+@import 'top-input-section';
+@import 'item-giphy-search';
+@import 'item-giphy-trends';
 
 
 
@@ -25,7 +29,7 @@ body{
         
         
         .contenedor_center{
-            width: 85%;
+            width: 90%;
     
 
 

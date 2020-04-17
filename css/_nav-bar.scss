@@ -55,7 +55,8 @@ body{
                                     visibility: hidden;
                                     background-color: $color-background-boxmenu-day;
                                     box-shadow: $box-shadow-boxmenu-day;
-                                    
+
+                                                                     
                                     
                                     li{ 
                                         margin: 13px 10px;                                                                         
@@ -68,6 +69,10 @@ body{
                                         a{
                                             text-align: left;                                            
                                             display: block; 
+                                            
+                                            span{
+                                                text-decoration: underline;
+                                            }
                                             
                                                                                 
                                         }
@@ -139,12 +144,16 @@ body{
                             background-color: transparent;
                             a{
                                 padding: 7px 0px;
+                                span{
+                                    text-decoration: underline;
+                                }
                             }
 
                             &:hover{
                                 background-color: transparent;
                                 box-shadow: none;
                             }
+                            
                         }                                                        
 
 

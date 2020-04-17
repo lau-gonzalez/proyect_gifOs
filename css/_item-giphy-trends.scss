@@ -1,0 +1,47 @@
+.div-results_suggested{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;   
+    margin-top: 20px;
+    
+
+    .div_item{
+        background-color: $color-background-boxmenu-day;
+        box-shadow: $box-shadow-boxmenu-day;
+        padding: 4px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        
+       
+
+        .top_item{
+
+            background: $color-background-bar-day;
+            background: $color-gradient-bar-day;
+            width: 280px;
+            margin-bottom: 4px;
+            display: inline-flex;
+            justify-content: space-between;
+
+                                    
+
+            h2{
+                color: $color-font-top-bar;                
+                font-size: 12px;
+                font-weight: 400;
+                    
+
+            }
+
+            .close_svg{
+                width: 16px;                               
+            }
+
+               
+            
+        }
+    }
+
+}
+    
