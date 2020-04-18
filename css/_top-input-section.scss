@@ -5,14 +5,14 @@ body{
                 margin-top: 64px;            
             
                 .top_input_section{
-                    font-family: $font-family-principal;
-                    color: $color-font-button;
+                    font-family: var(--font-family-principal);
+                    color: var(--color-font-button1);
                     font-size: 14px;
                     display: block;
                     width: 100%;
                     background-color: #FFFAFE;
-                    border: $color-border-top-input-section-day;
-                    box-shadow: $box-shadow-top-input-section-day;
+                    border: var(--color-border-top-input-section);
+                    box-shadow: var(--box-shadow-top-input-section);
                     padding: 7px 0px 7px 7px;
                                     
                 }

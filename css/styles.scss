@@ -17,7 +17,10 @@
 }
 
 body{
-    font-family: $font-family-principal;
+
+    font-family: var(--font-family-principal);
+    background-color: var(--background-body);
+   
     
   
     .contenedor{

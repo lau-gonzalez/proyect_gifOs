@@ -8,8 +8,8 @@ body{
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-evenly;
-                    background-color: $color-background-search-div;
-                    box-shadow: $box-shadow-search-div;
+                    background-color: var(--color-background-search-div);
+                    box-shadow: var(--box-shadow-search-div);
                     
 
                     ul{
@@ -28,9 +28,9 @@ body{
                             
                             a{
                                 display: block;
-                                font-family: $font-family-principal;
+                                font-family: var(--font-family-principal);
                                 font-size: 16px;
-                                color: $color-font-button;
+                                color: var(--color-font-button);
                                 text-decoration: none;
                                 padding: 5px 0;
                                 margin: 1px;

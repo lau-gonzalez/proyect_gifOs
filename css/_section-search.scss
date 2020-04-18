@@ -11,8 +11,8 @@ body{
             .search_input{
                 display: flex;
                 flex-flow: column nowrap;
-                background-color: $color-background-search-div;
-                box-shadow: $box-shadow-search-div;
+                background-color: var(--color-background-search-div);
+                box-shadow: var(--box-shadow-search-div);
 
                 .top_bar{
                     box-shadow: none;
@@ -34,8 +34,8 @@ body{
                         height: 48px;
                         width: 82%;
                         margin: 12px 0;
-                        font-family: $font-family-principal;
-                        color: $color-font-button;
+                        font-family: var(--font-family-principal);
+                        color: var(--color-font-button1);
                         
                         
 
@@ -48,7 +48,7 @@ body{
                             padding: 8px 4px;
                             margin: 1px 1px;
                             font-size: 16px;
-                            font-family: $font-family-principal;
+                            font-family: var(--font-family-principal);
                             
                         }
                                                
@@ -58,9 +58,9 @@ body{
                         
                                                                     
                         border: 1px solid #110038;
-                        box-shadow: $box-shadow-button-day;
-                        background-color: $color-background-button-day;
-                        color: $color-font-button;
+                        box-shadow: var(--box-shadow-button);
+                        background-color: var(--color-background-button);
+                        color: var(--color-font-button1);
 
                         &:hover > p{
                             border: 1px dashed #110038;
@@ -68,8 +68,8 @@ body{
 
                         &:hover{
                             
-                            background-color: $color-background-button-hover-day;
-                            box-shadow: $box-shadow-button-hover-day;
+                            background-color: var(--color-background-button-hover);
+                            box-shadow: var(--box-shadow-button-hover);
                         }
 
                     }

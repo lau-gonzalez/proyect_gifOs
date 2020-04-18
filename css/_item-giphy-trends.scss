@@ -6,19 +6,20 @@
     
 
     .div_item{
-        background-color: $color-background-boxmenu-day;
-        box-shadow: $box-shadow-boxmenu-day;
+        background-color: var(--color-background-boxmenu);
+        box-shadow: var(--box-shadow-boxmenu);
         padding: 4px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
+        position: relative;      
         
        
 
         .top_item{
 
-            background: $color-background-bar-day;
-            background: $color-gradient-bar-day;
+            background: var(--color-background-bar);
+            background: var(--color-gradient-bar);
             width: 280px;
             margin-bottom: 4px;
             display: inline-flex;
@@ -27,7 +28,7 @@
                                     
 
             h2{
-                color: $color-font-top-bar;                
+                color: var(--color-font-top-bar);                
                 font-size: 12px;
                 font-weight: 400;
                     
@@ -40,6 +41,26 @@
 
                
             
+        }
+
+        .item-giphy-trends{
+            
+            
+        }
+
+        #see_more_button{
+            position: absolute;            
+            left: 12px;
+            top: 250px;
+            width: 81px;
+            height: 34px;
+            border: 1px solid #4C2F99;
+            background-color: var(--color-background-button-gif);
+            box-shadow: var(--box-shadow-button-gif);
+            color: var(--color-font-top-bar);
+            font-size: 14px;
+            cursor: pointer;            
+
         }
     }
 

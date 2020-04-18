@@ -1,12 +1,12 @@
 body{
     
-    .top_bar{
-        background: $color-background-bar-day;
-        background: $color-gradient-bar-day;
-        box-shadow: 0 1px 0 0 #110038;
+    .top_bar{        
+        margin: 1px 0px;       
+        background: var(--color-gradient-bar);
+        box-shadow: var(--box-shadow-top-bar);
 
         h2{
-            color: $color-font-top-bar;                
+            color: var(--color-font-top-bar);                
             font-size: 12px;
             font-weight: 400;                
 

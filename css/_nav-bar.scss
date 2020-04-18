@@ -1,5 +1,6 @@
 body{
   
+    
     .contenedor{
 
         .contenedor_center{
@@ -53,8 +54,8 @@ body{
                                     position: absolute;                                    
                                     display: block;
                                     visibility: hidden;
-                                    background-color: $color-background-boxmenu-day;
-                                    box-shadow: $box-shadow-boxmenu-day;
+                                    background-color: var(--color-background-boxmenu);
+                                    box-shadow: var(--box-shadow-boxmenu);
 
                                                                      
                                     
@@ -78,15 +79,23 @@ body{
                                         }
                                         .button1{  
                                             padding: 7px 60px 7px 16px;                                      
-                                            background-color: $color-background-button1-menu-day;
-                                            box-shadow: $box-shadow-button1-menu-day;
-                                            border: $color-border-button1-menu-day;
+                                            background-color: var(--color-background-button1-menu);
+                                            box-shadow: var(--box-shadow-button1-menu);
+                                            border: var(--color-border-button1-menu);
+                                            color: var(--color-font-button1);
+                                            &:hover{
+                                                background-color: var(--color-background-button);
+                                            }
                                         }
                                         .button2{
                                             padding: 7px 49px 7px 16px;
-                                            background-color: $color-background-button2-menu-day;
-                                            box-shadow: $box-shadow-button2-menu-day;
-                                            border: $color-border-button2-menu-day;
+                                            background-color: var(--color-background-button2-menu);
+                                            box-shadow: var(--box-shadow-button2-menu);
+                                            border: var(--color-border-button2-menu);
+                                            color: var(--color-font-button);
+                                            &:hover{
+                                                background-color: var(--color-background-button);
+                                            }
                                         }
                                     }
                                 }
@@ -106,16 +115,16 @@ body{
                             margin: 0 10px;
                             padding: 1px;                           
                             border: 1px solid #110038;
-                            box-shadow: $box-shadow-button-day;
-                            background-color: $color-background-button-day;
+                            box-shadow: var(--box-shadow-button);
+                            background-color: var(--color-background-button);
 
                             &:hover > a{
-                                border: 1px dashed #110038;
+                                border: var(--border-hover-dashed);
                             }
 
                             &:hover{
-                                background-color: $color-background-button-hover-day;
-                                box-shadow: $box-shadow-button-hover-day;
+                                background-color: var(--color-background-button-hover);
+                                box-shadow: var(--box-shadow-button-hover);
                             }
                             
                                                   
@@ -123,7 +132,7 @@ body{
                             
                             a{  
                                 text-decoration: none;
-                                color: $color-font-button;                                
+                                color: var(--color-font-button);                                
                                 font-size: 16px;
                                 display: block;
                                 padding: 7px 26px;
