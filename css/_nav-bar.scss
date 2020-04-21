@@ -18,9 +18,14 @@ body{
                     align-items: center;
                     justify-content: space-between;
                     
-                    img{
-                        width: 102.6px;
+                    #logo{
+                        width: 102.6px;                        
                     }
+                    #arrow{
+                        width: 24px;
+                        margin-right: 7px;
+                    }
+                    
                     ul{
                         list-style: none;
                         display: flex;
@@ -29,8 +34,16 @@ body{
                         
                                              
                         .list_theme{
-                            display: flex;                           
+                            display: flex;
                             
+                            &:hover > li >a{
+                                border: var(--border-hover-dashed);
+                            }
+
+                            &:hover > li {
+                                background-color: var(--color-background-button-hover);
+                                box-shadow: var(--box-shadow-button-hover);
+                            }                            
 
                             &:hover > li .submenu{
                                 visibility: visible;
@@ -42,7 +55,9 @@ body{
                                 padding: 1px;
 
                                 .link_theme{
-                                    padding: 7px 26px;                                    
+                                    padding: 7px 26px;
+                                    cursor: default;
+                                    pointer-events: none;
                                 }                                                         
                                 
                                 
@@ -102,8 +117,9 @@ body{
                             }
     
                             .button_arrow a{
-                                padding: 6px 12px;
-                                
+                                padding: 7px 12px;
+                                cursor: default;
+                                pointer-events: none;                                
                             }
                               
                             
