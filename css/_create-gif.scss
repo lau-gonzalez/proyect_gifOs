@@ -1,12 +1,93 @@
-#section_create_gif{
+.section_create_gif, 
+#section_video_show{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     
-    .create_gif{
-        max-width: 684px;
-        max-height: 386px;
-        width: 47.5%;
+    .create_gif{      
+        width: 55%;
         height: 35.9%;
+
+        .box_create_gif{
+            margin: 30px 93px 28px 73px;
+            position: relative;
+
+            &::before{
+                content: url(../img/window_img.png);
+                display: block;
+                position: absolute;
+                left: -45px;
+                
+            }
+
+            h3{
+                font-family: var(--font-family-principal); 
+                font-weight: bold; 
+                font-size: 16px;                
+                letter-spacing: 0;
+                color: var(--color-font-button);
+                margin-bottom: 17px;               
+                
+
+            }
+            p{
+                font-family: var(--font-family-principal);           
+                font-size: 14px;
+                letter-spacing: 0;
+                line-height: 30px;
+                color: var(--color-font-button);
+
+
+
+                .italic_span{                   
+                    font-weight: bold;
+                    font-style: italic;                  
+                }
+
+                .h3_span{
+                    font-family: var(--font-family-principal); 
+                    font-weight: bold; 
+                    font-size: 16px;                
+                    letter-spacing: 0;                
+                    color: var(--color-font-button);
+                    margin-bottom: 17px; 
+                }
+            }
+        }
+
+        .create_gif_button{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
+            margin-right: 36px;
+            margin-bottom: 36px;
+
+            .button_white{              
+                font-family: var(--font-family-principal);
+                color: var(--color-font-button1);
+                width: 144px;
+                height: 36px;
+                font-size: 16px;
+                box-shadow: var(--box-shadow-button);
+                border: var(--border-box-button-create-gif);
+                margin-right: 16px;
+                background-color: var(--color-background-button1-menu);
+                cursor: pointer;
+
+            }
+
+            .button_pink{
+                font-family: var(--font-family-principal);
+                color: var(--color-font-button1);
+                width: 144px;
+                height: 36px;
+                font-size: 16px;
+                box-shadow: var(--box-shadow-button);
+                border: var(--border-box-button-create-gif);                
+                background-color: var(--color-background-button);
+                cursor: pointer;
+            }
+
+        }
     }
 }

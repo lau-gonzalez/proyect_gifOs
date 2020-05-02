@@ -1,8 +1,12 @@
+
+
 //FUNCION PETICION API GIPHY CON KEYWORD
+
+    $('#top_input_section_search').hide();
 
     const searchForm = document.getElementById('input_button_search');
     const searchInput = document.getElementById('search-input');
-    const resultsEl = document.getElementById('div-results_trends');   
+    const resultsEl = document.getElementById('div-results_search');   
 
 
     function results(text) {
@@ -31,15 +35,18 @@
             
                             
             let resultsHTML = '';
-            json.data.forEach(function (obj){
+            json.data.forEach(function (obj){                
                 
                 const url = obj.images.fixed_width.url;
                 const alt = obj.title;
                 resultsHTML += `<img class='item-giphy-search' src= '${url}' width='288px' height='298px'alt='${alt}'>`;
             })
             resultsEl.innerHTML = resultsHTML;
-            document.getElementById("top_input_section_tendencias").value=`${q}(resultados)`;
+            document.getElementById("top_input_section_search").value=`${q}(resultados)`;
             $('#section-results-suggested').hide();
+            $('#section-results-trends').hide();
+            $('#top_input_section_search').show();
+
 
         }).catch(function(err) {
             console.log(err.message);
@@ -47,7 +54,7 @@
     };
 
     function scroll() {
-        var elmnt = document.getElementById('div-results_trends');
+        var elmnt = document.getElementById('top_input_section_search');
         elmnt.scrollIntoView(true);
     };
 //FIN FUNCION PETICION API GIPHY CON KEYWORD
@@ -56,33 +63,28 @@
 
 //FUNCION PETICION API GIPHY TRENDS
     
-    const trendsEl = document.getElementById('div-results_suggested');
+    const trendsEl = document.getElementById('div-results_trends');
            
     $(document).ready(function trends () { 
                   
         const api_key = 'snee2JzN42l1qxLK6nyLRIHLNMRaDLDd';
-        const path = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=4&rating=g`;
+        const path = `https://api.giphy.com/v1/gifs/trending?api_key=${api_key}&limit=16&rating=g`;
         fetch(path).then(function(res) {
             return res.json();
         }).then(function (json) {
+
+            let resultsHTML = '';
                                                          
-            let trendsHTML = '';
-            json.data.forEach(function (obj){
-                
+           
+            json.data.forEach(function (obj){                
+                                
                 const url = obj.images.fixed_width.url;
-                const alt = obj.user.display_name;
-                trendsHTML += `
-                <div class='div_item'>
-                    <div class="top_item">
-                        <h2>#${alt}</h2>
-                        <img src='./img/close.svg' alt='close' class='close_svg'>
-                    </div>
-                    <img class='item-giphy-trends' src= '${url}' width='280px' height='280px'alt='${alt}'>
-                    <button id='see_more_button'>Ver más..</button>
-                </div>
-                `;
+                var alt = obj.title;
+                alt = alt.slice(-6);
+
+                resultsHTML += `<img class='item-giphy-search' src= '${url}' width='288px' height='298px'alt='${alt}'>`;
             })
-            trendsEl.innerHTML = trendsHTML;
+            trendsEl.innerHTML = resultsHTML;  
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -90,9 +92,10 @@
 //FIN FUNCION PETICION API GIPHY TRENDS
 
 
-//FUNCION PETICION API GIPHY TRENDS
-    
+//FUNCION PETICION API GIPHY AUTOCOMPLETE
+
     const autoCompleteEl = document.getElementById('results_suggested');
+    
     
            
     $('.search-input').keyup(function() {  
@@ -134,7 +137,52 @@
             });
         }
     });
-//FIN FUNCION PETICION API GIPHY TRENDS      
+//FIN FUNCION PETICION API GIPHY AUTOCOMPLETE 
+
+//FUNCION PETICION API GIPHY SUGERIDOS
+$(document).ready(
+    function suggested () {
+
+        const resultEl = document.getElementById('div-results_suggested');        
+
+        const q = 'rock';           
+        const api_key = 'snee2JzN42l1qxLK6nyLRIHLNMRaDLDd';
+        const path = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=4`;
+        fetch(path).then(function(res) {
+            return res.json();
+        }).then(function (json) {            
+                            
+            
+            let trendsHTML = '';
+            json.data.forEach(function (obj){                
+                
+                const url = obj.images.fixed_width.url;
+                const alt = obj.title;
+                
+                
+                trendsHTML += `
+                <div class='div_item'>
+                    <div class="top_item">
+                        <h2>#${alt}</h2>
+                        <img src='./img/close.svg' alt='close' class='close_svg'>
+                    </div>
+                    <img class='item-giphy-trends' src= '${url}' width='280px' height='280px'alt='${alt}'>
+                    <button id='see_more_button'>Ver más..</button>
+                </div>
+                `;
+            })
+            resultEl.innerHTML = trendsHTML;                   
+
+
+        }).catch(function(err) {
+            console.log(err.message);
+        });
+    }
+
+);
+
+   
+//FIN FUNCION RESULTADOS SUGERIDOS
 
  
    

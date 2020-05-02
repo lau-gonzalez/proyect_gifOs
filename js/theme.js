@@ -1,5 +1,6 @@
 //FUNCION CAMBIAR THEME
-function changeThemeNight(){
+function changeThemeNight(){   
+
     let root = document.documentElement;
 
     document.getElementById("logo").src="./img/gifOF_logo_dark.png";
@@ -23,7 +24,7 @@ function changeThemeNight(){
     root.style.setProperty('--border-hover-dashed', '1px dashed #FFFFFF');
     root.style.setProperty('--color-font-button', '#FFFFFF');
     //SEARCH-BOX
-    root.style.setProperty('--color-background-search-div', '#B4B4B4');
+    root.style.setProperty('--color-background-search-div', '#B4B4B4');    
     root.style.setProperty('--box-shadow-search-div', 'inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF');
     root.style.setProperty('--color-border-top-input-section', '1px solid #2E32FB');
     root.style.setProperty('--box-shadow-top-input-section', 'inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038');
@@ -31,14 +32,14 @@ function changeThemeNight(){
     root.style.setProperty('--color-background-button-gif', '#2E32FB');
     root.style.setProperty('--box-shadow-button-gif', 'inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF');
     
-    return false;
+    return false
 }
+
 
 function changeThemeDay(){
 
-
     let root = document.documentElement;
-
+ 
     document.getElementById("logo").src="./img/gifOF_logo.png";
 
     //TOP_BAR
@@ -67,6 +68,7 @@ function changeThemeDay(){
     //GIF-SECTION
     root.style.setProperty('--color-background-button-gif','#4180F6' );
     root.style.setProperty('--box-shadow-button-gif','inset -1px -1px 0 0 #284F99, inset 1px 1px 0 0 #FFFFFF');
+    //ICONS   
 
-    return false;
+    return false
 }

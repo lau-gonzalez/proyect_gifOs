@@ -1,7 +1,9 @@
 //FUNCION PARA HABILITAR/DESHABILITAR BOTON 'BUSCAR'
-$('#btn').attr('disabled',true);                
+$('#btn').attr('disabled',true);
+let root = document.documentElement;                
     
-$('.search-input').keyup(function() {
+$('.search-input').keyup(function(theme_dark) {
+    console.log(theme_dark)
     const value = $('.search-input').val();
     const n = value.length;           
     
@@ -9,9 +11,11 @@ $('.search-input').keyup(function() {
        
         $('#btn').attr('disabled',false);
         $('#btn').addClass('enable');
+        root.style.setProperty('--color-lupa', '#110038');
     }else {
         $('#btn').attr('disabled',true);
-        $('#btn').removeClass('enable');                
+        $('#btn').removeClass('enable');      
+        root.style.setProperty('--color-lupa', '#B4B4B4');                  
     }
 });  
 
