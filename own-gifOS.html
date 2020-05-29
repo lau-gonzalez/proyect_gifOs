@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gif.OS</title>
-    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    
-    
+
+
 </head>
+
 <body>
 
     <div class="top_bar">
         <h2>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h2>
     </div>
     <div class="contenedor">
-        
+
         <div class="contenedor_center">
-            <header>            
-                <nav style="justify-content: start;"> 
-                    <a href="index.html"><img src="img/arrow.svg" alt="arrow" id="arrow"></a>                   
-                    <img src="img/gifOF_logo.png" alt="logo" id="logo">                
+            <header>
+                <nav style="justify-content: start;">
+                    <a href="index.html"><img src="img/arrow.svg" alt="arrow" id="arrow"></a>
+                    <img src="img/gifOF_logo.png" alt="logo" id="logo">
                 </nav>
-            </header>            
+            </header>
             <section id="section_create_gif" class="section_create_gif">
                 <div class='search_input create_gif'>
                     <div class="top_bar">
@@ -30,53 +32,102 @@
                     </div>
                     <div class="box_create_gif">
                         <h3>Aquí podrás crear tus propios guifos</h3>
-                        <p>Crear tu <span class="italic_span">guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:<br>
-                            <span class="h3_span">1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)<br>
+                        <p>Crear tu <span class="italic_span">guifo</span> es muy fácil, graba cualquier imagen con tu
+                            cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:<br>
+                            <span class="h3_span">1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de
+                            uso)<br>
                             <span class="h3_span">2)</span> Capturar tu momento guifo<br>
                             <span class="h3_span">3)</span> Revisar el momento<br>
                             <span class="h3_span">4)</span> Listo para subir y compartir!<br>
                             ¿Quieres comenzar a crear tu <span>guifo</span> ahora?
-                        </p>                        
+                        </p>
                     </div>
                     <div class="create_gif_button">
-                        <input type="button" value="Cancelar" class="button_white" onclick="window.location.href='index.html'">                        
+                        <input type="button" value="Cancelar" class="button_white"
+                            onclick="window.location.href='index.html'">
                         <input type="button" value="Comenzar" class="button_pink" onclick="getStreamAndRecord()">
-                    </div>                                     
+                    </div>
                 </div>
             </section>
             <section id="section_video_show">
                 <div class='video_gif search_input create_gif'>
                     <div class="top_bar">
-                        <h2>Un Chequeo Antes de Empezar</h2>
-                    </div>                    
+                        <h2 id="h2_topbar">Un Chequeo Antes de Empezar</h2>
+                    </div>
                     <video id="player" autoplay></video>
+                    <div class="img_div" id="img_div"><img id="video_grabado" /></div>
+                    <div id="subiendo_gif">
+                        <img id='globe_img' src="img/globe_img.png" alt="">
+                        <h4>Estamos subiendo tu guifo...</h4>
+                        <img id='bar_img' src="img/bar.PNG" alt="">
+                        <p>Tiempo restante: <span style="text-decoration: line-through;">38 años</span> algunos minutos
+                        </p>
+                    </div>
+                    <div id="finished_gif">
+                        <div class="video_grabado_img_div"><img id="video_grabado_img" /></div>
+                        <div id="title_buttons_div">
+                            <h4>Guifo creado con éxito</h4>
+                            <input type="button" value="Copiar Enlace Guifo" class="button_white"
+                                onclick="repetirCaptura()">
+                            <input type="button" value="Descargar Guifo" class="button_white" onclick="finalizarGif()">
+                        </div>
+                    </div>
                     <div class="create_gif_button">
-                        <button class="button_camera">
-                            <svg width="18" height="17" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 3H12V1.5h1.5V3h3v1.5h-3V3zm0 12h3v1.5h-15V15h12zm-12-3v3H0V4.5h1.5V12zm15-7.5H18V15h-1.5V4.5zm-12 0h-3V3h3v1.5zm0-3H6V3H4.5V1.5zm4.5 0H6V0h6v1.5H9zM6 9v3H4.5V6H6v3zm3 3h3v1.5H6V12h3zm0-6H6V4.5h6V6H9zm3 1.5V6h1.5v6H12V7.5z" fill="#110038" fill-rule="nonzero">                                
-                            </svg>
-                        </button>                        
-                        <input type="button" value="Comenzar" class="button_pink" onclick="getStreamAndRecord()">
-                    </div>  
-                </div>               
-            </section>                     
-            <section id="section-results-trends">
-                <div>
-                    <input type="text" id='top_input_section_tendencias' class="top_input_section" value='Tendencias' disabled >
+                        <div id="start_btn">
+                            <button class="button_camera">
+                                <svg width="18" height="17" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.5 3H12V1.5h1.5V3h3v1.5h-3V3zm0 12h3v1.5h-15V15h12zm-12-3v3H0V4.5h1.5V12zm15-7.5H18V15h-1.5V4.5zm-12 0h-3V3h3v1.5zm0-3H6V3H4.5V1.5zm4.5 0H6V0h6v1.5H9zM6 9v3H4.5V6H6v3zm3 3h3v1.5H6V12h3zm0-6H6V4.5h6V6H9zm3 1.5V6h1.5v6H12V7.5z"
+                                        fill="#110038" fill-rule="nonzero">
+                                </svg>
+                            </button>
+                            <input type="button" value="Capturar" class="button_pink" onclick="grabarGif()">
+                        </div>
+                        <div id="listo_btn">
+                            <img src="" alt="">
+                            <button class="button_record">
+                                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11 2H7V0h6v2h-2zM9 9h2v2H9V9zM4.5 4.5V7H2V2h5v2.5H4.5zM2 9v4H0V7h2v2zm2.5 6.5H7V18H2v-5h2.5v2.5zM9 18h4v2H7v-2h2zm6.5-2.5V13H18v5h-5v-2.5h2.5zM18 9V7h2v6h-2V9zm-2.5-4.5H13V2h5v5h-2.5V4.5z"
+                                        fill="#FFF" fill-rule="nonzero" /></svg>
+                            </button>
+                            <input type="button" value="Listo" class="button_red" onclick="showVideo()">
+                        </div>
+                        <div id="upload_buttons">
+                            <input type="button" value="Repetir Captura" class="button_white"
+                                onclick="repetirCaptura()">
+                            <input type="button" value="Subir Guifo" class="button_pink" onclick="finalizarGif()">
+                        </div>
+                        <div id="cancel_button">
+                            <input type="button" value="Cancelar" class="button_white" onclick="repetirCaptura()">
+                        </div>
+                        <div id="listo_button">
+                            <input type="button" value="Listo" class="button_pink" onclick="repetirCaptura()">
+                        </div>
+                    </div>
                 </div>
-                <div id='div-results_trends' class='div-results_trends'>
+            </section>
+            <section id="section-results-myGif">
+                <div>
+                    <input type="text" id='top_input_section_tendencias' class="top_input_section" value='Mis Guifos'
+                        disabled>
+                </div>
+                <div id='div-results_myGif' class='div-results_trends'>
                     <!-- gif Images Here -->
                 </div>
             </section>
-            
-      </div>
+
+        </div>
     </div>
 
-<!-- JQuery y JS-->
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/request.js"></script>
-<script type="text/javascript" src="js/theme.js"></script>
-<script type="text/javascript" src="js/button.js"></script>
-<script type="text/javascript" src="js/video.js"></script>
-<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <!-- JQuery y JS-->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/video.js"></script>
+    <script type="text/javascript" src="js/theme.js"></script>
+
 </body>
+
 </html>

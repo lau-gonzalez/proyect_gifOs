@@ -26,12 +26,13 @@
             return false;
     }); 
 
-    function search (q) {           
+    function search(q) {           
         const api_key = 'snee2JzN42l1qxLK6nyLRIHLNMRaDLDd';
         const path = `https://api.giphy.com/v1/gifs/search?api_key=${api_key}&q=${q}&limit=16`;
         fetch(path).then(function(res) {
             return res.json();
         }).then(function (json) {
+            console.log(json)
             
                             
             let resultsHTML = '';
@@ -167,7 +168,7 @@ $(document).ready(
                         <img src='./img/close.svg' alt='close' class='close_svg'>
                     </div>
                     <img class='item-giphy-trends' src= '${url}' width='280px' height='280px'alt='${alt}'>
-                    <button id='see_more_button'>Ver más..</button>
+                    <button id='see_more_button' onclick='seeMore()'>Ver más..</button>
                 </div>
                 `;
             })
@@ -183,6 +184,31 @@ $(document).ready(
 
    
 //FIN FUNCION RESULTADOS SUGERIDOS
+
+function seeMore(){
+    const q = 'rock';
+    search(q);
+}
+
+//FUNCION MOSTRAR GIFS
+
+$('#section-results-myGif').hide();
+
+function mostrarGifs(){
+    const resultsEl = document.getElementById('div-results_myGif');
+    let resultsHTML = '';   
+    for(let i = 0; i < localStorage.length; i++) {              
+        var key = localStorage.key(i)
+        const gif = localStorage.getItem(key)
+        const url = JSON.parse(gif).data.images.fixed_width.url        
+
+        resultsHTML += `<img class='item-giphy-search' src= '${url}' width='288px' height='298px'alt='gif_${i}'>`;
+    }
+    resultsEl.innerHTML = resultsHTML
+    $('#section-results-suggested').hide();
+    $('#section-results-trends').hide();
+    $('#section-results-myGif').show();
+}
 
  
    

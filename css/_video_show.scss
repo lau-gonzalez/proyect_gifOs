@@ -1,31 +1,143 @@
-#section_video_show{
-    display: flex;    
+#section_video_show {
+    display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-        
-    .video_gif{
-        width: 70%;    
-       
-        video{
-            margin: 10px 0px 24px 0px;
+
+    .video_gif {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+
+        video {
             -webkit-transform: scaleX(-1);
-             transform: scaleX(-1);
-                  
+            transform: scaleX(-1);
+            max-height: 480px;
+        }
+        .img_div {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0px 24px 0px;
+
+            #video_grabado {
+                width: 600px;
+                height: 480px;
+            }
         }
 
-        .button_camera{
-            font-family: var(--font-family-principal);
-            color: var(--color-font-button1);
-            width: 36px;
-            height: 36px;
-            font-size: 16px;
-            box-shadow: var(--box-shadow-button);
-            border: var(--border-box-button-create-gif);                
-            background-color: var(--color-background-button);
-            cursor: pointer;
+        #subiendo_gif{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;           
+            width: 98%;
+            margin-left: 8px;
+            height: 480px;
+            background-color: white;
+            
+
+            #globe_img{
+                width: 48px;
+                margin-bottom: 8px;
+            }
+
+            #bar_img{
+                width: 324px;
+                margin-top: 41px;
+                margin-bottom: 8px;
+            }
+
         }
 
-        
+        #finished_gif{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 98%;            
+            margin-left: 8px;
+
+            #title_buttons_div{
+                display: flex;
+                width: 40%;
+                flex-direction: column;
+                justify-content: center;
+
+                .video_grabado_img_div{
+                    
+                    #video_grabado_img{
+                        width: 365px;
+                        height: 200px;
+                    }
+                }
+
+                .button_white{              
+                    font-family: var(--font-family-principal);
+                    color: var(--color-font-button1);
+                    width: 256px;
+                    height: 36px;
+                    font-size: 16px;
+                    box-shadow: var(--box-shadow-button);
+                    border: var(--border-box-button-create-gif);
+                    margin: 16px 0 14px 0;
+                    background-color: var(--color-background-button1-menu);
+                    cursor: pointer;    
+                }
+    
+               
+            }
+        }
+
+        .create_gif_button {
+            margin-top: 37px;
+            #start_btn {
+                display: flex;
+                flex-flow: row nowrap;
+
+                .button_camera {
+                    font-family: var(--font-family-principal);
+                    color: var(--color-font-button1);
+                    width: 36px;
+                    height: 36px;
+                    align-items: center;
+                    box-shadow: var(--box-shadow-button);
+                    border: var(--border-box-button-create-gif);
+                    background-color: var(--color-background-button);
+                    cursor: pointer;
+                }
+
+                &:hover{
+                    background-color: var(--color-background-button-hover);
+                    box-shadow: var(--box-shadow-button-hover);
+                }
+            }
+            #listo_btn {
+                display: flex;
+                flex-flow: row nowrap;
+
+                .button_record {
+                    font-family: var(--font-family-principal);
+                    color: var(---color-font-top-bar);
+                    width: 36px;
+                    height: 36px;
+                    align-items: center;
+                    box-shadow: var(--box-shadow-button-record);
+                    border: var(--border-box-button-create-gif);
+                    background-color: var(--color-background-button-record);
+                    cursor: pointer;
+                }
+                
+
+                .button_red {
+                    font-family: var(--font-family-principal);
+                    color: var(--color-font-top-bar);
+                    width: 144px;
+                    height: 36px;
+                    font-size: 16px;
+                    box-shadow: var(--box-shadow-button-record);
+                    border: var(--border-box-button-create-gif);
+                    background-color: var(--color-background-button-record);
+                    cursor: pointer;
+                }
+            }
+        }
     }
-
 }

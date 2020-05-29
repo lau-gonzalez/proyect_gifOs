@@ -40,7 +40,7 @@
                                 </a>
                             </li>
                         </div>
-                        <li class="without_border"><a href="./own-gifOS.html"><span>M</span>is Guifos</a></li>
+                        <li class="without_border" style="cursor:pointer"><a onclick="mostrarGifs()"><span>M</span>is Guifos</a></li>
                     </ul>            
                 </nav>
             </header>
@@ -86,7 +86,15 @@
                 <div id='div-results_search' class='div-results_search'>
                     <!-- GIF RESULTADOS DE BUSQUEDA AQUI -->
                 </div>
-            </section>            
+            </section>
+            <section id="section-results-myGif">
+                <div>
+                    <input type="text" id='top_input_section_search' class="top_input_section" value='Mis Guifos' disabled >
+                </div>
+                <div id='div-results_myGif' class='div-results_search'>
+                    <!-- MIS GUIFOS AQUI -->
+                </div>
+            </section>              
       </div>
     </div>
 <!-- JQuery y JS-->
