@@ -5,25 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gif.OS</title>
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch:400,700&display=swap" rel="stylesheet">   
-    
-    <link rel="stylesheet" href="css/styles.css">
-    
-    
+    <link rel="stylesheet" href="css/styles.css">   
 </head>
 <body>   
     <div class="top_bar">
         <h2>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</h2>
     </div>
-    <div class="contenedor">
-        
+    <div class="contenedor">        
         <div class="contenedor_center">
             <header>            
                 <nav>
                     <img src="img/gifOF_logo.png" alt="logo_" id="logo">
-                    <ul>
-                        <li><a href="./own-gifOS.html">Crear Guifos</a></li>
-                        <div class="list_theme">
-                            <li><a class="link_theme" href="">Elegir tema</a>
+                    <nav>
+                        <ul style="list-style: none;"><li><a href="./own-gifOS.html">Crear Guifos</a></li></ul>
+                        <ul class="list_theme">
+                            <li class="li_theme"><a class="link_theme" href="">Elegir tema</a>
                                 <ul class="submenu">
                                     <li><a class="button1" href="" onclick="return changeThemeDay()"><span>S</span>ailor Day</a></li>
                                     <li><a class="button2" href="" onclick="return changeThemeNight()">Sailor Night</a></li>
@@ -33,15 +29,15 @@
                                 <a href="">
                                     <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg" class="dropdown">
                                         <g fill-rule="evenodd">
-                                            <path d="M5 4H4V3H3V2H2V1H1V0h9v1H9v1H8v1H7v1H6v1H5V4z">
+                                            <path d="M5 4H4V3H3V2H2V1H1V0h9v1H9v1H8v1H7v1H6v1H5V4z"/>
                                             <path d="M1 1h1v1h1v1h1v1h1v2H4V5H3V4H2V3H1V2H0V1h1z" fill="#FFF"/>
                                         </g>
                                     </svg>
                                 </a>
                             </li>
-                        </div>
-                        <li class="without_border" style="cursor:pointer"><a onclick="mostrarGifs()"><span>M</span>is Guifos</a></li>
-                    </ul>            
+                        </ul>
+                        <ul style="list-style: none;"><li class="without_border" style="cursor:pointer"><a onclick="mostrarGifs()"><span>M</span>is Guifos</a></li></ul>
+                    </nav>            
                 </nav>
             </header>
             <section id="search"  class="search_input">
@@ -50,13 +46,11 @@
                 </div>
                 <form id="input_button_search">
                     <input type="text" id='search-input' class="search-input" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
-                    <button id="btn" class="btn" type="submit">
-                        <div>                       
+                    <button id="btn" class="btn" type="submit">                          
                             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" class="lupa_path">
                                 <path d="M7.1 1.8H3.6V0h5.3v1.8H7zm3.6 1.8H8.9V1.8h1.8v1.8zm0 7h1.7v1.8h-1.7v-1.7zM8.9 9h1.8v1.8H8.9V8.9zM10.7 7V3.6h1.7v5.3h-1.7V7zM3.6 1.8v1.8H1.8V1.8h1.8zm8.8 10.6h1.8v1.8h-1.8v-1.8zm1.8 1.8H16V16h-1.8v-1.8zm-8.9-3.5H9v1.7H3.6v-1.7h1.7zM1.8 5.3V9H0V3.6h1.8v1.7zm0 3.6h1.8v1.8H1.8V8.9z" fill-rule="nonzero"/>
                             </svg>
-                            <p>Buscar</p>
-                        </div> 
+                            Buscar                             
                     </button>                  
                 </form>
                 <div id="results_suggested">                  
@@ -64,6 +58,8 @@
                 </div>
             </section>
             <section id="section-results-suggested">
+                <h2 style="display: none;">:)</h2>
+                <!--para evitar el warning en el validador-->                
                 <div>
                     <input type="text" class="top_input_section" value='Hoy te sugerimos:' disabled>
                 </div>
@@ -72,6 +68,8 @@
                 </div>
             </section>
             <section id="section-results-trends">
+                <h2 style="display: none;">:)</h2>
+                <!--para evitar el warning en el validador-->
                 <div>
                     <input type="text" id='top_input_section_tendencias' class="top_input_section" value='Tendencias' disabled >
                 </div>
@@ -80,6 +78,8 @@
                 </div>
             </section>
             <section id="section-results-search">
+                <h2 style="display: none;">:)</h2>
+                <!--para evitar el warning en el validador-->
                 <div>
                     <input type="text" id='top_input_section_search' class="top_input_section" value='Resultado' disabled >
                 </div>
@@ -88,8 +88,10 @@
                 </div>
             </section>
             <section id="section-results-myGif">
+                <h2 style="display: none;">:)</h2>
+                <!--para evitar el warning en el validador-->
                 <div>
-                    <input type="text" id='top_input_section_search' class="top_input_section" value='Mis Guifos' disabled >
+                    <input type="text" id='top_input_section_gifs' class="top_input_section" value='Mis Guifos' disabled >
                 </div>
                 <div id='div-results_myGif' class='div-results_search'>
                     <!-- MIS GUIFOS AQUI -->
@@ -99,8 +101,8 @@
     </div>
 <!-- JQuery y JS-->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/request.js"></script>
-<script type="text/javascript" src="js/theme.js"></script>
-<script type="text/javascript" src="js/button.js"></script>
+<script src="js/request.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/button.js"></script>
 </body>
 </html>

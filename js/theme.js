@@ -1,12 +1,11 @@
-//FUNCION CAMBIAR THEME
+//FUNCION CAMBIAR THEME NIGHT
 
 function changeThemeNight() {
 
-    localStorage.setItem('theme', 'false');
+    sessionStorage.setItem('theme', 'false');
 
     let root = document.documentElement;
-
-    document.getElementById("arrow").src = "./img/gifOF_logo_dark.png";
+        
     document.getElementById("logo").src = "./img/gifOF_logo_dark.png";
 
     //TOP_BAR
@@ -39,13 +38,18 @@ function changeThemeNight() {
     return false
 }
 
+//FIN FUNCION CAMBIAR THEME NIGHT
+
+//---------------------------------------------------------------------------------------------------------//
+
+//FUNCION CAMBIAR THEME DAY
 
 
 function changeThemeDay() {
 
     let root = document.documentElement;
 
-    localStorage.setItem('theme', 'true');
+    sessionStorage.setItem('theme', 'true');
 
 
     document.getElementById("logo").src = "./img/gifOF_logo.png";
@@ -78,11 +82,17 @@ function changeThemeDay() {
     root.style.setProperty('--box-shadow-button-gif', 'inset -1px -1px 0 0 #284F99, inset 1px 1px 0 0 #FFFFFF');
     //ICONS   
 
-    return
+    return false
 }
 
+//FIN FUNCION CAMBIAR THEME DAY
+
+//---------------------------------------------------------------------------------------------------------//
+
+//FUNCION VERIFICAR THEME ACTUAL
+
 function verifyTheme() {
-    let theme = localStorage.getItem('theme')
+    let theme = sessionStorage.getItem('theme')
     if (theme == 'false') {
         changeThemeNight();
     } else {
@@ -90,9 +100,11 @@ function verifyTheme() {
     }
 }
 
-let theme = localStorage.getItem('theme')
-if (theme == 'false') {
-    changeThemeNight();
-}
+//FIN FUNCION VERIFICAR THEME ACTUAL
+
+verifyTheme()
+
+//---------------------------------------------------------------------------------------------------------//
+
 
 

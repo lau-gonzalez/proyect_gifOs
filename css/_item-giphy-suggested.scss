@@ -10,6 +10,7 @@
         box-shadow: var(--box-shadow-boxmenu);
         padding: 4px;
         display: flex;
+        margin-bottom: 16px;
         flex-flow: column nowrap;
         justify-content: space-between;
         position: relative;
@@ -36,7 +37,7 @@
             }
 
             .close_svg{
-                width: 16px;                
+                width: 16px;               
             
                 
             }

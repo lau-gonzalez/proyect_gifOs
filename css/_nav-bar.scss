@@ -26,7 +26,7 @@ body{
                         margin-right: 7px;
                     }
                     
-                    ul{
+                    nav{
                         list-style: none;
                         display: flex;
                         justify-content: flex-end;
@@ -35,6 +35,7 @@ body{
                                              
                         .list_theme{
                             display: flex;
+                            list-style: none;
                             
                             &:hover > li >a{
                                 border: var(--border-hover-dashed);
@@ -62,7 +63,7 @@ body{
                                 
                                 
                                 .submenu{
-                                
+                                    list-style: none;
                                     width: 100%;
                                     max-width: 176.469px;
                                     margin-top: 2px;

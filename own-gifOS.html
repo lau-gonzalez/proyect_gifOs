@@ -55,7 +55,7 @@
                         <h2 id="h2_topbar">Un Chequeo Antes de Empezar</h2>
                     </div>
                     <video id="player" autoplay></video>
-                    <div class="img_div" id="img_div"><img id="video_grabado" /></div>
+                    <div class="img_div" id="img_div"><img src="." id="video_grabado" alt="." /></div>
                     <div id="subiendo_gif">
                         <img id='globe_img' src="img/globe_img.png" alt="">
                         <h4>Estamos subiendo tu guifo...</h4>
@@ -64,12 +64,11 @@
                         </p>
                     </div>
                     <div id="finished_gif">
-                        <div class="video_grabado_img_div"><img id="video_grabado_img" /></div>
+                        <div class="video_grabado_img_div"><img id="video_grabado_img" src="." alt="." /></div>
                         <div id="title_buttons_div">
                             <h4>Guifo creado con éxito</h4>
-                            <input type="button" value="Copiar Enlace Guifo" class="button_white"
-                                onclick="repetirCaptura()">
-                            <input type="button" value="Descargar Guifo" class="button_white" onclick="finalizarGif()">
+                            <input type="button" value="Copiar Enlace Guifo" class="button_white" onclick="copiarGif()">
+                            <input type="button" value="Descargar Guifo" class="button_white" onclick="download()">
                         </div>
                     </div>
                     <div class="create_gif_button">
@@ -78,22 +77,27 @@
                                 <svg width="18" height="17" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M13.5 3H12V1.5h1.5V3h3v1.5h-3V3zm0 12h3v1.5h-15V15h12zm-12-3v3H0V4.5h1.5V12zm15-7.5H18V15h-1.5V4.5zm-12 0h-3V3h3v1.5zm0-3H6V3H4.5V1.5zm4.5 0H6V0h6v1.5H9zM6 9v3H4.5V6H6v3zm3 3h3v1.5H6V12h3zm0-6H6V4.5h6V6H9zm3 1.5V6h1.5v6H12V7.5z"
-                                        fill="#110038" fill-rule="nonzero">
+                                        fill="#110038" fill-rule="nonzero" />
                                 </svg>
                             </button>
                             <input type="button" value="Capturar" class="button_pink" onclick="grabarGif()">
                         </div>
                         <div id="listo_btn">
-                            <img src="" alt="">
-                            <button class="button_record">
-                                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M11 2H7V0h6v2h-2zM9 9h2v2H9V9zM4.5 4.5V7H2V2h5v2.5H4.5zM2 9v4H0V7h2v2zm2.5 6.5H7V18H2v-5h2.5v2.5zM9 18h4v2H7v-2h2zm6.5-2.5V13H18v5h-5v-2.5h2.5zM18 9V7h2v6h-2V9zm-2.5-4.5H13V2h5v5h-2.5V4.5z"
-                                        fill="#FFF" fill-rule="nonzero" /></svg>
-                            </button>
-                            <input type="button" value="Listo" class="button_red" onclick="showVideo()">
+                            <div class="div_listo_btn">
+                                <img src="img/timer.PNG" alt="timer">
+                                <div>
+                                    <button class="button_record">
+                                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11 2H7V0h6v2h-2zM9 9h2v2H9V9zM4.5 4.5V7H2V2h5v2.5H4.5zM2 9v4H0V7h2v2zm2.5 6.5H7V18H2v-5h2.5v2.5zM9 18h4v2H7v-2h2zm6.5-2.5V13H18v5h-5v-2.5h2.5zM18 9V7h2v6h-2V9zm-2.5-4.5H13V2h5v5h-2.5V4.5z"
+                                                fill="#FFF" fill-rule="nonzero" /></svg>
+                                    </button>
+                                    <input type="button" value="Listo" class="button_red" onclick="showVideo()">
+                                </div>
+                            </div>
                         </div>
                         <div id="upload_buttons">
+                            <img src="img/timer_bar.PNG" alt="timer_bar">
                             <input type="button" value="Repetir Captura" class="button_white"
                                 onclick="repetirCaptura()">
                             <input type="button" value="Subir Guifo" class="button_pink" onclick="finalizarGif()">
@@ -108,6 +112,8 @@
                 </div>
             </section>
             <section id="section-results-myGif">
+                <h2 style="display: none;">:)</h2>
+                <!--para evitar el warning en el validador-->
                 <div>
                     <input type="text" id='top_input_section_tendencias' class="top_input_section" value='Mis Guifos'
                         disabled>
@@ -116,7 +122,6 @@
                     <!-- gif Images Here -->
                 </div>
             </section>
-
         </div>
     </div>
 
@@ -125,8 +130,8 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/video.js"></script>
-    <script type="text/javascript" src="js/theme.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/theme.js"></script>
 
 </body>
 

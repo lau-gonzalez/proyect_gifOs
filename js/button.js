@@ -1,4 +1,5 @@
 //FUNCION PARA HABILITAR/DESHABILITAR BOTON 'BUSCAR'
+
 $('#btn').attr('disabled',true);
 let root = document.documentElement;                
     
@@ -20,3 +21,5 @@ $('.search-input').keyup(function(theme_dark) {
 });  
 
 //FIN FUNCION PARA HABILITAR/DESHABILITAR BOTON 'BUSCAR'
+
+//------------------------------------------------------------------------------------------------//

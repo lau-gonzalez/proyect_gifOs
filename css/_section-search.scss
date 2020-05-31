@@ -1,98 +1,66 @@
-
-
-body{  
-    
-  
-    .contenedor{      
-        
-        .contenedor_center{  
-
-
-            .search_input{
+body {
+    .contenedor {
+        .contenedor_center {
+            .search_input {
                 display: flex;
                 flex-flow: column nowrap;
                 background-color: var(--color-background-search-div);
                 box-shadow: var(--box-shadow-search-div);
 
-                .top_bar{
+                .top_bar {
                     box-shadow: none;
                     width: 100%;
-                    h2{
+                    h2 {
                         font-weight: 700;
                     }
-                    
                 }
 
-                #input_button_search{
+                #input_button_search {
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-evenly;
                     align-items: center;
-                    
 
-                    input{
+                    input {
                         height: 48px;
                         width: 82%;
                         margin: 12px 0;
                         font-family: var(--font-family-principal);
                         color: var(--color-font-button1);
-                        
-                        
-
                     }
-                    #btn{
+                    #btn {
                         width: 12%;
-
-                        div{
-                            display: flex;
-                            flex-flow: row nowrap;
-                            justify-content: space-evenly;
-                            align-items: center;
-                            margin: 1px;
-
-                                                                    
-                            p{  
-                                
-                                padding: 8px 1px;                               
-                                font-size: 16px;
-                                font-family: var(--font-family-principal);                                     
-                                
-                            }
-                        }
-                                                
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        margin: 1px;
+                        padding: 8px 1px;
+                        font-size: 16px;
+                        font-family: var(--font-family-principal);
                     }
 
-                    .enable{
-                        
-                                                                    
+                    .enable {
                         border: 1px solid #110038;
                         box-shadow: var(--box-shadow-button);
                         background-color: var(--color-background-button);
                         color: var(--color-font-button);
 
-                        &:hover > div{
+                        &:hover {
                             border: 1px dashed #110038;
                         }
 
-                        &:hover{
-                            
+                        &:hover {
                             background-color: var(--color-background-button-hover);
                             box-shadow: var(--box-shadow-button-hover);
                         }
-                        
-                        .lupa{
-                            fill: #110038;                                
+
+                        .lupa {
+                            fill: var(--color-font-button);
                         }
-
                     }
-
-
                 }
-            
             }
-
-        }   
-
-        
-    }     
+        }
+    }
 }

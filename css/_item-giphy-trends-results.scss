@@ -6,8 +6,41 @@
     justify-content: space-between;
     margin-top: 20px;
 
+    div{
+        display: flex;
+        position: relative;
 
-    .item-giphy-search{
-        margin-bottom: 16px;        
+        &:hover > .hover-gif{
+            display:block
+        }
+
+        .item-giphy-search{
+            margin-bottom: 16px;            
+        }
+
+
+        .hover-gif{
+            display: none;
+            width: 288px;
+            height: 20px;
+            text-align: left;  
+            background: var(--color-gradient-bar);
+            box-shadow: var(--box-shadow-top-bar);
+            position: absolute;
+            color: var(--color-font-top-bar);               
+            font-size: 12px;
+            font-weight: 400;
+            top: 278px;  
+            
+        }
+    
     }
+    
+
+
+    
+
+    
+    
+   
 }
