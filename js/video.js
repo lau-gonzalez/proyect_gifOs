@@ -137,6 +137,7 @@ async function uploadToServer(formData) {
         .then(function (response) {
             console.log(response);
             return response.json();
+            
         })
         .then(function (miBlob) {
             console.log(miBlob);
