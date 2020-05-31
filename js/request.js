@@ -214,7 +214,7 @@ function mostrarGifs() {
         const gif = localStorage.getItem(key)
         const url = JSON.parse(gif).data.images.fixed_width.url
 
-        resultsHTML += `<img class='item-giphy-search' src= '${url}' width='288px' height='298px'alt='gif_${i}'>`;
+        resultsHTML += `<img class='item-giphy-search' style='margin-bottom: 10px' src= '${url}' width='288px' height='298px'alt='gif_${i}'>`;
     }
     resultsEl.innerHTML = resultsHTML
     $('#section-results-suggested').hide();
