@@ -132,7 +132,7 @@ async function uploadToServer(formData) {
         mode: 'cors',
         cache: 'default'
     };
-    const url = 'http://upload.giphy.com/v1/gifs';
+    const url = 'https://upload.giphy.com/v1/gifs';
     await fetch(url + '?api_key=' + api_key, miInit)
         .then(function (response) {
             console.log(response);
